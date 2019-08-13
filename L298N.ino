@@ -1,28 +1,38 @@
-const int in1 = 2;
-const int in2 = 3;
-const int in3 = 4;
-const int in4 = 5;
-
-const int enA = 6;
-const int enB = 7;
-
+const int IN1 = 2;
+const int IN2 = 3;
+const int IN3 = 4;
+const int IN4 = 5;
+const int ENA = 6; //first motor
+const int ENB = 7; //second motor
 
 void setup()
 
 {
-  pinMode(in1,OUTPUT);
-  pinMode(in2,OUTPUT);
-  pinMode(in3,OUTPUT);
-  pinMode(in4,OUTPUT);
-  pinMode(enA,OUTPUT);
-  pinMode(enB,OUTPUT);
+  
+  pinMode(IN1,OUTPUT);
+  pinMode(IN2,OUTPUT);
+  pinMode(IN3,OUTPUT);
+  pinMode(IN4,OUTPUT);
+  pinMode(ENA,OUTPUT);
+  pinMode(ENB,OUTPUT);
+  
 }
+
 void loop()
+
 {
-  analogWrite(6,255);
-  analogWrite(7,2);
-  digitalWrite(in1,HIGH);
-  digitalWrite(in2,LOW);
-  digitalWrite(in3,HIGH);
-  digitalWrite(in4,LOW);
+  
+  //first motor
+  
+  analogWrite(ENA,255); // you can change first motors velocity by giving value between 1-255
+  digitalWrite(IN1,HIGH);
+  digitalWrite(IN2,LOW);
+  
+  //second motor
+  
+  analogWrite(ENB,255); // you can change second motors velocity by giving value between 1-255
+  digitalWrite(IN3,HIGH);
+  digitalWrite(IN4,LOW);
+
 }
+
